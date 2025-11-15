@@ -42,7 +42,8 @@ const Register = () => {
               </div>
               <div className="m-2">
                 <label className="inline-block w-50">Email</label>
-                <input type="email" className="border-2" />
+                <input type="email" className="border-2" {...register("email",{required:"Email is required"})} />
+                {errors.email && <p className="text-red-600 ml-2 text-sm text-right">{errors.email?.message}</p>}
               </div>
               <div className="m-2">
                 <label className="inline-block w-50">Phone number</label>
