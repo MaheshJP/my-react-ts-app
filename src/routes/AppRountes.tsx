@@ -6,6 +6,9 @@ import DashboardLayout from '../layout/DashboardLayout';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Home from '../pages/Home';
+import ProductDetails from '@/pages/productDetails';
+import Products from '@/pages/products';
+import ContactUs from '@/pages/contactus';
 
 // Define the router configuration
 const router = createBrowserRouter([
@@ -28,12 +31,20 @@ const router = createBrowserRouter([
     element: <DashboardLayout />,
     children: [
       {
-        index: true,
+        path: '',
         element: <Home />,
       },
       {
-        path: 'home',
-        element: <Home />,
+        path: 'products',
+        element: <Products />,
+      },
+      {
+        path: 'productDetails',
+        element: <ProductDetails />,
+      },
+      {
+        path: 'constactus',
+        element: <ContactUs />,
       },
     ],
   }

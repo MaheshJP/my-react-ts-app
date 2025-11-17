@@ -35,7 +35,9 @@ const submitLoginForm = (data: LoginFormData) => {
   navigate('/dashboard');
   reset();
 };
-
+const redirectToRegister = () => {
+  navigate('/register');
+}
 
   return (
     <>
@@ -56,8 +58,10 @@ const submitLoginForm = (data: LoginFormData) => {
                 <input type="password" className="border-2" {...register("password",{required:"Password is required"})} />
                 {errors.password && <p className="text-red-600 ml-2 text-sm text-right">{errors.password.message}</p>}
               </div>
-              <div className="flex justify-end">
-                <Button type="submit">Login</Button>
+              
+                <Button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white w-75">Login</Button>
+              <div className="flex justify-center mt-4">
+                <a onClick={redirectToRegister} className="text-blue-600 hover:underline cursor-pointer">Don't have an account? Register</a>
               </div>
             </form>
           </CardContent>
