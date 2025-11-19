@@ -1,6 +1,6 @@
 // src/routes/AppRoutes.tsx
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 import AuthLayout from '../layout/AuthLayout';
 import DashboardLayout from '../layout/DashboardLayout';
 import Login from '../pages/Login';
@@ -35,11 +35,11 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: 'products',
+        path: 'product',
         element: <Products />,
       },
       {
-        path: 'productDetails',
+        path: 'product/:id',
         element: <ProductDetails />,
       },
       {
